@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/HiringHood/static/css/main.3ec59f0c.css",
+    "main.js": "/HiringHood/static/js/main.696bb3e2.js",
+    "static/media/leaf.gif": "/HiringHood/static/media/leaf.c7f44673417c96a8f07e.gif",
+    "static/media/query-analysis.png": "/HiringHood/static/media/query-analysis.b15dd90cf820ee8be5e5.png",
+    "static/media/wind.png": "/HiringHood/static/media/wind.fb52bda5620e24ed0e7d.png",
+    "static/media/noun-confused-4196244.png": "/HiringHood/static/media/noun-confused-4196244.bb6052c5440cfa22c181.png",
+    "index.html": "/HiringHood/index.html",
+    "main.3ec59f0c.css.map": "/HiringHood/static/css/main.3ec59f0c.css.map",
+    "main.696bb3e2.js.map": "/HiringHood/static/js/main.696bb3e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ec59f0c.css",
+    "static/js/main.696bb3e2.js"
+  ]
+}
