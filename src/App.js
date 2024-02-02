@@ -14,18 +14,20 @@ function App() {
      const [select,setSelect]=useState(<Welcome/>);
 
   async function renderComp(comp){
-
+        //this is for mobile dashboard
     document.getElementById("dashboard").classList.remove("expandMe");
-    await new Promise(resolve=>setTimeout(()=>setTimeout(()=>resolve("This is for loading Time"),200)));
 
+    await new Promise(resolve=>setTimeout(()=>setTimeout(()=>resolve("This is for loading Time"),200)));
+         //stored available section for easy state change
     let sections=["welcome","current","forecast","historical","future","marine","astronomy","timezone","sports"]
      let components=[<Welcome/>,<Current/>,<Forecast/>,<Historical/>,<Future/>,<Marine/>,<Astronomy/>,<Timezone/>,<Sports/>];
       setSelect("");
+      //displaying component loader for just some simulation
     document.getElementById("componentLoader").style.display="grid";
     await new Promise(resolve=>setTimeout(()=>setTimeout(()=>resolve("This is for loading Time"),500)));
 
     document.getElementById("componentLoader").style.display="none";
-        
+        //displaying selected section.
            setSelect(components[sections.indexOf(comp)]);
         
          
@@ -56,9 +58,29 @@ function App() {
 
   return (
     <div id="app">
+         {/*
+          The App is designed to help the user navigate effortlessly. This is possible because of responsive design.
+        
+        We have implemented a dashboard which has two layouts. Appropiate layout will be activated based on the device width.
+      
+      
+        Summary about some common sections in all the components
+        There will a search, question/confused, loader, error and details sections.
 
+        Search : Will have an icon, input element and a button for event Handling.
+        Question/confused : This is just to guide the user for the first time.
+        Loader : To display animations while the function is running behind.
+        Error : To display the error in all possible cases.
+        Details : If everything goes well this section will display real-time details fetched from the API.
+
+        Note: For some components the layout might be a little different but the above sections would be present to handle the cases of all "User Interactions". 
+         
+         */}
+         {//icon to handle navigation bar closing
+         }
       <span id="dashToggle" ><i class="fa-solid fa-bars"></i></span>
-
+          {//This is navigation bar.
+            }
       <div id="dashboard" class="  text-white  shadow ">
           <i id="close" class="fa-solid fa-xmark"></i>
           <h1 id="dashIcon" onClick={()=>renderComp('welcome')}> <i class="fi fi-ss-cloud-code"></i> <span></span> </h1>
@@ -79,11 +101,13 @@ function App() {
 
         </div>
 
-
+         {//This is the container holding all components
+            }
       <div id="box" class="p-lg-3 p-md-2 p-sm-1 p-xs-1">
 
-
-       <div class="componentLoader" id="componentLoader"></div>
+         {//This is component loader which runs during state change
+            }
+            <div class="componentLoader" id="componentLoader"></div>
                 {select}
       </div>
           
