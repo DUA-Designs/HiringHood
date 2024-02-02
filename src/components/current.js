@@ -46,7 +46,7 @@ const smiley=[`<i class="fa-regular fa-face-smile-beam"></i>`,`<i class="fa-regu
     //displaying loader
     loader.style.height= `${window.innerHeight-document.getElementById("searchForCurrent").offsetHeight}px`;
     //changing the view point to the details.
-    document.getElementById("comeHere").scrollIntoView({behavior:"smooth"});
+    loader.scrollIntoView({behavior:"smooth"});
     loader.style.display="grid";
   
 
